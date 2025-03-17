@@ -1,0 +1,6 @@
+/build
+/data
+
+*.txt
+
+list.md

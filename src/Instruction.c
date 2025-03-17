@@ -7,7 +7,7 @@
 #include "IO.h"
 
 uint16_t FetchOpAddr(const OpType type) {
-    switch (type) {
+    switch(type) {
     case IMM:
         return PC++;
     case MEM: {
@@ -19,14 +19,14 @@ uint16_t FetchOpAddr(const OpType type) {
         int8_t offset = (int8_t)RAM[PC++];
         return PC + offset;
     }
-    case REG: return 0;
+    case REG:
     case NONE:
     default: return 0;
     }
 }
 
 uint8_t ReadOp(const OpType type, const uint16_t addr) {
-    switch (type) {
+    switch(type) {
     case IMM:
     case MEM:
     case REL:

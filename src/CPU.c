@@ -11,10 +11,12 @@
 const Meta TABLE[] = {
     {0xEA, NOP, NONE, NONE, 1}, // No Operation
     {0xA9, LDA, REG, IMM, 2},   // Load Accumulator with Immediate
+    {0xAD, LDA, MEM, NONE, 3},  // Load Accumulator with Absolute
     {0x8D, STA, MEM, REG, 3},   // Store Accumulator to Memory
     {0xAA, TAX, REG, REG, 1},   // Transfer Accumulator to X
     {0xE8, INX, REG, NONE, 1},  // Increment X
     {0x69, ADC, REG, IMM, 2},   // Add with Carry
+    {0x6D, ADC, MEM, NONE, 3},  // Add with Carry (Absolute)
     {0xE9, SBC, REG, IMM, 2},   // Subtract with Carry
     {0x29, AND, REG, IMM, 2},   // Logical AND with Immediate
     {0x09, ORA, REG, IMM, 2},   // Logical Inclusive OR with Immediate
@@ -26,7 +28,7 @@ const Meta TABLE[] = {
     {0x08, PHP, NONE, REG, 1},  // Push Processor Status
     {0x60, RTS, NONE, NONE, 1}, // Return from Subroutine
     {0x00, BRK, NONE, NONE, 1}, // Force Interrupt
-    {0x40, RTI, NONE, NONE, 1}  // Return from Interrupt
+    {0x40, RTI, NONE, NONE, 1}, // Return from Interrupt
 };
 
 uint8_t A = 0;

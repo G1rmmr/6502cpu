@@ -1,6 +1,8 @@
 /build
-/data
 
 *.txt
+
+prog.asm
+prog.bin
 
 list.md

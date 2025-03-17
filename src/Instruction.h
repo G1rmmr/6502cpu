@@ -4,32 +4,20 @@
 #include <stdint.h>
 
 typedef enum {
+    NONE,
     REG,
     IMM,
     MEM,
-    REL,
-    NONE
+    REL
 } OpType;
 
 typedef enum {
     NOP,
-    LDA,
-    STA,
-    TAX,
-    INX,
-    ADC,
-    SBC,
-    AND,
-    ORA,
-    JMP,
-    BNE,
-    BEQ,
-    PHA,
-    PLA,
-    PHP,
-    RTS,
-    BRK,
-    RTI
+    LDA, STA, TAX, INX,
+    ADC, SBC, AND, ORA,
+    JMP, BNE, BEQ,
+    PHA, PLA, PHP, PLP, RTS,
+    BRK, RTI
 } InstructionType;
 
 typedef struct {
